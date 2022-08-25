@@ -1,0 +1,50 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    height: auto;
+}
+
+body {
+    @include sticky-footer;
+    /* font-family: "Roboto", "Arial", sans-serif; */
+    /* font-size: 16px; */
+    /* font-weight: 400; */
+    /* line-height: var(--main-line-height); */
+}
+
+/* VISUALLY-HIDDEN */
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    // max-width: ;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+/* STICKY-FOOTER */
+
+.site-main {
+    flex-grow: 1;
+}
