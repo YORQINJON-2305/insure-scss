@@ -1,0 +1,25 @@
+// KARLA
+@font-face {
+    font-family: "Karla";
+    font-display: swap;
+    font-weight: 400;
+    src: url("../fonts/karla-v23-latin-regular.woff2") format("woff2"), 
+         url("../fonts/karla-v23-latin-regular.woff") format("woff"); 
+  }
+
+  @font-face {
+    font-family: "Karla";
+    font-display: swap;
+    font-weight: 700;
+    src: url("../fonts/karla-v23-latin-700.woff2") format("woff2"), 
+         url("../fonts/karla-v23-latin-700.woff") format("woff"); 
+  }
+
+//   DM Serif Display
+  @font-face {
+    font-family: "DM Serif Display";
+    font-display: swap;
+    font-weight: 700;
+    src: url("../fonts/dm-serif-display-v10-latin-regular.woff2") format("woff2"), 
+         url("../fonts/dm-serif-display-v10-latin-regular.woff") format("woff"); 
+  }

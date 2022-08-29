@@ -22,10 +22,11 @@ img {
 
 body {
     @include sticky-footer;
-    /* font-family: "Roboto", "Arial", sans-serif; */
-    /* font-size: 16px; */
-    /* font-weight: 400; */
-    /* line-height: var(--main-line-height); */
+    font-family: "Karla", "Arial",sans-serif;
+    font-size: 16px; 
+    font-weight: 400;
+    line-height: var(--main-line-height);
+    overflow-x: hidden;
 }
 
 /* VISUALLY-HIDDEN */
@@ -38,9 +39,9 @@ body {
 
 .container {
     width: 100%;
-    // max-width: ;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 0px 24px;
 }
 
 /* STICKY-FOOTER */

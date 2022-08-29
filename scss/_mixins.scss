@@ -1,6 +1,4 @@
 // Mixins
-
-
 @mixin visually-hidden{
     position: absolute;
     width: 1px;
@@ -21,8 +19,18 @@
     margin: 0;
 }
 
+@mixin list-style($margin, $p-l){
+    margin: $margin;
+    padding-left: $p-l;
+    list-style-type: none;
+}
+
+@mixin text-decoration{
+    text-decoration: none;
+}
+
 @mixin mobile-first($min) {
-    @media only screen and ($min) {
+    @media only screen and (min-width: $min) {
         @content
     }
 }

@@ -1,0 +1,123 @@
+.features {
+    margin-bottom: 140px;
+}
+
+.features__title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.features__line {
+    display: block;
+    width: 150px;
+    height: 1px;
+    margin-bottom: 40px;
+    background-color: #C396C6;
+}
+
+.features__tite {
+    margin-top: 0;
+    margin-bottom: 80px;
+    font-family: var(--main-font-family);
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.666667px;
+    color: var(--main-text-color);
+}
+
+.features__list {
+    @include list-style(0, 0);
+    text-align: center;
+}
+
+.features__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin: 0 auto;
+    &:not(:last-child){
+        margin-bottom: 56px;
+    }
+
+    &::before{
+        display: block;
+        width: 86px;
+        height: 86px;
+        margin-bottom: 32px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        content: "";
+    }
+
+    &:first-child::before{
+        background-image: url("../../images/process.svg");
+    }
+
+    &:nth-child(2)::before{
+        background-image: url("../../images/prices.svg");
+    }
+
+    &:nth-child(3)::before{
+        background-image: url("../../images/person.svg");
+    }
+}
+
+.features__subtitle {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-family: var(--main-font-family);
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: -0.388889px;
+    color: var(--main-text-color);
+}
+
+.features__descr{
+    color: var(--main-descr-color);
+}
+
+@include mobile-first(768px){
+
+    .features__title-wrap{
+        align-items: start;
+        margin-bottom: 96px;
+    }
+
+    .features__line{
+        margin-bottom: 63px;
+    }
+
+    .features__tite{
+        margin-bottom: 0;
+        font-size: 72px;
+        line-height: 64px;
+        letter-spacing: -1px;
+    }
+
+    .features__list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .features__item{
+        align-items: start;
+        text-align: start;
+        &:not(:last-child){
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include mobile-first(992px){
+    
+    .features__item{
+        &:not(:last-child){
+            margin-right: 30px;
+        }
+    }
+}

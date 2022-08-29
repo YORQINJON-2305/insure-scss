@@ -1,0 +1,176 @@
+.site-header {
+    position: relative;
+    padding: 24px 0px;
+    background-color: #fff;
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header__burger-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 1px solid var(--main-text-color);
+}
+
+.site-header__burger {
+    width: 16px;
+    height: 1.5px;
+    background-color: var(--main-text-color);
+    transition: all 0.3s ease;
+
+    &::before,
+    &::after {
+        position: absolute;
+        width: 16px;
+        height: 1.5px;
+        background-color: var(--main-text-color);
+        transition: all 0.3s ease;
+        content: "";
+    }
+
+    &::before {
+        transform: translateY(-4px);
+    }
+
+    &::after {
+        transform: translateY(4px);
+    }
+}
+
+// BURGER ANIMATION
+.site-header.open .site-header__burger {
+    transform: translateX(15px);
+    background-color: transparent;
+}
+
+.site-header.open .site-header__burger::before {
+    transform: rotate(45deg) translate(-11px, 11px);
+}
+
+.site-header.open .site-header__burger::after {
+    transform: rotate(-45deg) translate(-11px, -11px);
+    box-shadow: none;
+}
+
+.sitenav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+    height: 100vh;
+    padding-top: 40px;
+    text-align: center;
+    background-color: #2C2830;
+    background-image: url("../../images/hero-bg-top-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: calc(50% + 100px) calc(50% + 400px);
+}
+
+.site-header.open .sitenav {
+    display: block;
+}
+
+.sitenav__list {
+    @include list-style(0, 0);
+}
+
+.sitenav__item {
+    margin-bottom: 24px;
+}
+
+.sitenav__link {
+    font-weight: var(--main-font-weight);
+    font-size: $font-size-20;
+    line-height: $line-height;
+    color: $text-color-white;
+    @include text-decoration;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #2C2830;
+    }
+}
+
+.view-plans-btn {
+    padding: 12px 28.5px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    color: $text-color-white;
+    border: 1px solid $text-color-white;
+    @include text-decoration;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: $text-color-white;
+        background-color: #2C2830;
+    }
+}
+
+@include mobile-first(600px) {
+
+    .site-header__burger-wrap {
+        display: none;
+    }
+
+    .sitenav {
+        position: static;
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+        padding-top: 0;
+        background-color: transparent;
+    }
+
+    .sitenav__list {
+        display: flex;
+        align-items: center;
+    }
+
+    .sitenav__item {
+        margin-right: 26px;
+        margin-bottom: 0;
+    }
+
+    .sitenav__link {
+        color: var(--main-descr-color);
+        font-size: 12px;
+        white-space: nowrap;
+        line-height: 15px;
+    }
+
+    .view-plans-btn {
+        padding: 10px 25px;
+        color: var(--main-text-color);
+        border: 1.5px solid #2C2830;
+    }
+}
+
+@include mobile-first(768px) {
+    .sitenav__link {
+        color: var(--main-descr-color);
+        font-size: 13px;
+        white-space: nowrap;
+        line-height: 15px;
+    }
+
+    .sitenav__link--btn {
+        padding: 12px 28.5px;
+        color: var(--main-text-color);
+        border: 1.5px solid #2C2830;
+    }
+}
